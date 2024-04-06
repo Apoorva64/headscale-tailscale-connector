@@ -7,6 +7,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions: write-all
 
     steps:
       - name: Checkout repository
@@ -33,7 +34,7 @@ jobs:
       - name: Run Release
         run: npm run release --ci
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_Token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: End message
         run: echo "All done!"
