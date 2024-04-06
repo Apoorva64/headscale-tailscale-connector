@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag ghcr.io/apoorva64/headscale-tailscale-connector:latest
+        run: docker build . --file Dockerfile --tag ghcr.io/apoorva64/headscale-tailscale-connector:latest, ghcr.io/apoorva64/headscale-tailscale-connector:${{ github.sha }}
 
       - name: Push the Docker image
-        run: docker push ghcr.io/apoorva64/headscale-tailscale-connector:latest
+        run: docker push ghcr.io/apoorva64/headscale-tailscale-connector:latest && docker push ghcr.io/apoorva64/headscale-tailscale-connector:${{ github.sha }}
