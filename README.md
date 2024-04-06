@@ -66,12 +66,12 @@ Developed to streamline backend development, this boilerplate is your solution f
 │   │   └── healthCheckRouter.ts
 │   └── user
 │       ├── __tests__
-│       │   ├── userRouter.test.ts
-│       │   └── userService.test.ts
-│       ├── userModel.ts
-│       ├── userRepository.ts
-│       ├── userRouter.ts
-│       └── userService.ts
+│       │   ├── oauthRouter.test.ts
+│       │   └── oauthService.test.ts
+│       ├── oauthModel.ts
+│       ├── oauthRepository.ts
+│       ├── oauthRouter.ts
+│       └── oauthService.ts
 ├── api-docs
 │   ├── openAPIDocumentGenerator.ts
 │   ├── openAPIResponseBuilders.ts

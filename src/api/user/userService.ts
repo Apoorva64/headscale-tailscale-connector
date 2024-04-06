@@ -22,7 +22,7 @@ export const userService = {
   },
 
   // Retrieves a single user by their ID
-  findById: async (id: number): Promise<ServiceResponse<User | null>> => {
+  findById: async (id: string): Promise<ServiceResponse<User | null>> => {
     try {
       const user = await userRepository.findByIdAsync(id);
       if (!user) {

@@ -35,8 +35,7 @@ export const userRouter: Router = (() => {
   });
 
   router.get('/:id', validateRequest(GetUserSchema), async (req: Request, res: Response) => {
-    const id = parseInt(req.params.id as string, 10);
-    const serviceResponse = await userService.findById(id);
+    const serviceResponse = await userService.findById(req.params.id);
     handleServiceResponse(serviceResponse, res);
   });
 
