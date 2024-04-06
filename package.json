@@ -1,6 +1,6 @@
 {
   "name": "headscale-tailscale-connector",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A connector between tailscale API's and headscale API's",
   "main": "index.ts",
   "scripts": {
